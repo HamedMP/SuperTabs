@@ -1,0 +1,136 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>SuperTabs</title>
+    <style type="text/css">
+      * {
+        background-color: #fff;
+        /*box-sizing: border-box;*/
+      }
+
+      body {
+        width: 400px;
+        /*margin: 10px;*/
+        /*white-space: nowrap;*/
+      }
+
+      /* Remove margins and padding from the list */
+      ul {
+          margin: 0;
+          padding: 0;
+      }
+
+      /* Style the list items */
+      ul li {
+          cursor: pointer;
+          position: relative;
+          padding: 10px;
+          /*background: #eee;*/
+          font-size: 16px;
+          transition: 0.2s;
+
+          /* make the list items unselectable */
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+      }
+
+      #tabs a {
+          border: 1px solid #ddd; /* Add a border to all links */
+          border-radius:5px;
+          -moz-border-radius:5px;
+          -webkit-border-radius:5px;
+
+          margin-top: -1px; /* Prevent double borders */
+          background-color: #f6f6f6; /* Grey background color */
+          padding: 12px 15px; /* Add some padding */
+          text-decoration: none; /* Remove default text underline */
+          font-size: 18px; /* Increase the font-size */
+          color: black; /* Add a black text color */
+          display: block;
+           /*Make it into a block element to fill the whole list */
+      }
+
+      /* Style the header */
+      .header {
+          margin: auto;
+          size: 100%;
+          text-align: center;
+          display: table;
+      }
+
+      /* Clear floats after the header */
+      .header:after {
+         /* content: "";
+          display: table;
+          clear: both;*/
+      }
+
+      .container {
+
+      }
+
+      .icon {
+        display:inline-block;
+        margin-right: 10px;
+        vertical-align:middle;
+      }
+
+      .title {
+        display:inline-block;
+        margin: 20px, 10px;
+        font-size: 25px;
+        display:table-cell;
+        vertical-align:middle;
+      }
+
+      /* Style the input */
+      input {
+          border: none;
+          padding: 15px 10px;
+          float: inherit;
+          font-size: 16px;
+
+          margin: 10px auto;
+          width: 95%;
+          background-color: #f2f2f2;
+
+          border-radius:5px;
+          -moz-border-radius:5px;
+          -webkit-border-radius:5px;
+      }
+
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+    <script type="text/javascript" src="assets/jquery.min.js"></script>
+    <script src="popup.js"></script>
+  </head>
+
+  <body>
+
+    <span class="header">
+      <img src="assets/icon_32.png" class="icon">
+      <p class="title">Super Tabs</p>
+    </span>
+    
+    <hr>
+    <div>
+      <input id="search" onkeyup="function()" placeholder="Search tabs">
+    </div>
+
+    <div id="tabs" class="container"></div>
+    
+  </body>
+</html>

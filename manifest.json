@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "SuperTabs",
+  "description": "This extension allows the user to list and search the current open tabs and switch to them easily.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": {
+        "16": "assets/icon_16.png",
+        "32": "assets/icon_32.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "Click here!"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage"
+  ]
+}
