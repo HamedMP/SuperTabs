@@ -1,6 +1,7 @@
 
 /*
  Copyright (c) 2018, Hamed MP
+@thehamedmp
 
  All rights reserved.
  Redistribution and use in source and binary forms, with or without
@@ -25,6 +26,9 @@
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+chrome.commands.onCommand.addListener(function(command) {
+        console.log('Command:', command);
+});
 
 function updateBadge(){
   chrome.tabs.query({},function(tabs){     
@@ -37,6 +41,4 @@ chrome.tabs.onRemoved.addListener(updateBadge);
 // chrome.tabs.onCreated.addListener(updateBadge);
 // chrome.tabs.onCreated.addListener(updateBadge);
 updateBadge();
-
-console.log
 

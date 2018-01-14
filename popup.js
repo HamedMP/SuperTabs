@@ -1,6 +1,7 @@
 
 /*
  Copyright (c) 2018, Hamed MP
+ @thehamedmp
 
  All rights reserved.
  Redistribution and use in source and binary forms, with or without
@@ -26,19 +27,23 @@
  */
 
 
-// Search the bookmarks when entering the search keyword.
+// Search the tabs when entering the search keyword.
 $(function() {
   $('#search').keyup(function() {
      $('#tabs').empty();
-     dumpTabs($('#search').val());
+     dumpTabs($('#search').val())
   });
 });
 
-
+$(document).keypress(function(e) {
+    if(e.which == 13) {
+        
+    }
+});
 
 function dumpTabs(query){
   var tabs = chrome.tabs.query({},function(tabs){
-    console.log(tabs);
+    // console.log(tabs);
     populateTabs(tabs, query);
   });
 
@@ -59,17 +64,17 @@ function parseTabs(tabs, query){
 
 function dumpNode(tab, query) {
   if (tab.title) {
-    if (query && String(tab.title.toUpperCase()).indexOf(query.toUpperCase()) == -1) {
+    if (query && String(tab.title.toUpperCase() + tab.url.toUpperCase()).indexOf(query.toUpperCase()) == -1) {
       return $('<span></span>');
     }
 
     var anchor = $('<a>');
     anchor.attr('href', tab.url);
     anchor.attr('style', 'margin-left: 15px; display:inline-block;');
-    anchor.text(tab.title.substring(0, 30) + ' ...');
+    anchor.text(tab.title.substring(0, 27) + ' ...');
     /*
-     * When clicking on a bookmark in the extension, a new tab is fired with
-     * the bookmark url.
+     * When clicking on a tabs in the extension, a new tab is fired with
+     * its url.
      */
     anchor.click(function() {
       chrome.tabs.update(tab.id, {active: true});
@@ -84,12 +89,14 @@ function dumpNode(tab, query) {
     fav.attr('style', 'vertical-align:middle; height:32px, width:32px; max-width:32px; max-height:32px');
 
     var span = $('<div>');
+    span.attr('style', ' display: flex;');
 
     if (tab.highlighted){
       anchor.css("background-color", "#f2f2f2");
     }  else {
       anchor.css("background-color", "#fff");
     }
+    // anchor.attr('style', ' margin-right: 0px;');
 
     var options = $('<span> [<a id="deletelink" ' +
         'href="#">Close</a>]</span>');

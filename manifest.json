@@ -3,23 +3,34 @@
 
   "name": "SuperTabs",
   "description": "This extension allows the user to list and search the current open tabs and switch to them easily.",
-  "version": "1.0",
+  "version": "0.0.1",
 
   "browser_action": {
     "default_icon": {
         "16": "assets/icon_16.png",
-        "32": "assets/icon_32.png"
+        "32": "assets/icon_32.png",
+        "64": "assets/icon_64.png",
+        "128": "assets/icon_128.png"
     },
     "default_popup": "popup.html",
-    "default_title": "Click here!"
+    "default_title": "Super Tabs"
   },
   "background": {
     "scripts": ["background.js"],
     "persistent": false
   },
+  "commands": {
+          "search_tabs": {
+            "suggested_key": {
+              "default": "Ctrl+Shift+E",
+              "mac": "Command+Shift+E"
+            },
+            "description": "Toggle Super Tabs",
+            "global": true
+          }
+        },
   "permissions": [
     "tabs",
-    "activeTab",
-    "storage"
+    "activeTab"
   ]
 }
