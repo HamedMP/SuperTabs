@@ -21,9 +21,15 @@ A superuser tool to acomplish your tasks and internet surfing faster. No more sc
 
 ## Features
 
+![supertabs_920](screenshots/supertabs_920.png)
+
 - See number of open tabs across all windows as the badge counter ![badge](screenshots/badge.png)
 - List all open tabs
 - Search through titles and urls of the tabs and quickly switch them by clicking on them.
+- (Optional) Keyboard shortcuts: 
+  - Access [chrome extensions manager](chrome://extensions) and scroll to the end of the page. 
+  - Click on *Keyboard shortcuts* and assign your desired key combination such as **Ctrl+E** to *SuperTabs* extension. 
+  - Next time you are lost in the tabs, just press your shortcut and the search bar in *SuperTabs* will be activated. 
 
 ## Permissions
 - Tabs permission: To access currently open tabs and their url and titles.
