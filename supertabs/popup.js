@@ -123,4 +123,5 @@ function dumpNode(tab, query) {
 
 document.addEventListener('DOMContentLoaded', () => {
   dumpTabs();
+  $('#search').focus();
 });
