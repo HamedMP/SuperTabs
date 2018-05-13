@@ -1,5 +1,5 @@
 
-<!-- 
+<!--
  Copyright (c) 2018, Hamed MP
  @thehamedmp
 
@@ -157,6 +157,12 @@
         color: black;
       }
 
+      #workaround-4296411 {
+        display: none;
+        height: 1px;
+        width: 1px;
+      }
+
     </style>
 
     <!--
@@ -175,19 +181,21 @@
       <img src="assets/icon_32.png" class="icon">
       <strong class="title">SuperTabs</strong>
     </span>
-    
+
     <hr style="color: #f2f2f2; margin-top: 5px;">
     <div>
       <input id="search" type="text" placeholder="Search tabs">
     </div>
 
-    <div id="tabs" class="container"></div>
+    <div id="tabs" class="container">
+      <div id="workaround-4296411"></div>
+    </div>
     <br>
     <hr style="color: #f2f2f2;">
-    <footer> 
-      <p>Developed by <a href="http://hamedmp.com">hamedmp.com </a> 
+    <footer>
+      <p>Developed by <a href="http://hamedmp.com">hamedmp.com </a>
         More: @thehamedmp
-      </p> 
+      </p>
   </footer>
   </body>
 </html>
