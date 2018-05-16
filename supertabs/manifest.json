@@ -3,7 +3,7 @@
 
   "name": "SuperTabs",
   "description": "SuperTabs allows you to list and search current open tabs and switch to them quickly.",
-  "version": "0.0.2",
+  "version": "1.0.0",
 
   "browser_action": {
     "default_icon": {
