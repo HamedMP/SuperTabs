@@ -125,3 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   dumpTabs();
   $('#search').focus();
 });
+
+// this is the workaround to make sure the popup display well
+// via https://bugs.chromium.org/p/chromium/issues/detail?id=307912
+setTimeout(function(){document.getElementById('workaround-4296411').style.display='block';}, 88);
