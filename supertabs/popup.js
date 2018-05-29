@@ -86,10 +86,10 @@ function dumpNode(tab, query) {
                           width:"32px", 
                           alt:""
                           });
-    fav.attr('style', 'vertical-align:middle; height:32px, width:32px; max-width:32px; max-height:32px');
+    fav.attr('style', 'vertical-align:middle; height:32px; width:32px; max-width:32px; max-height:32px; background-size: cover;padding:2px;');
 
     var span = $('<div>');
-    span.attr('style', ' display: flex;');
+    span.attr('style', ' display: flex; padding:3px');
 
     if (tab.highlighted){
       anchor.css("background-color", "#f2f2f2");

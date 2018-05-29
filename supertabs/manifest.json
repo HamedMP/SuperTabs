@@ -3,7 +3,7 @@
 
   "name": "SuperTabs",
   "description": "SuperTabs allows you to list and search current open tabs and switch to them quickly.",
-  "version": "1.0.0",
+  "version": "1.0.1",
 
   "browser_action": {
     "default_icon": {
@@ -20,12 +20,11 @@
     "persistent": false
   },
   "commands": {
-          "search_tabs": {
+          "_execute_browser_action": {
             "suggested_key": {
-              "default": "Ctrl+Shift+E",
-              "mac": "Command+Shift+E"
+              "default": "Ctrl+E",
+              "mac": "Command+E"
             },
-            "description": "Toggle Super Tabs",
             "global": true
           }
         },

@@ -13,6 +13,14 @@ Familiar scene? No worries anymore.
 
 
 
+## Demo
+
+
+
+[![](http://img.youtube.com/vi/uad9mZknUDk/0.jpg)](http://www.youtube.com/watch?v=uad9mZknUDk "SuperTabs Demo")
+
+
+
 ## Introduction
 
 A superuser tool to acomplish your tasks and internet surfing faster. No more scrolling over tabs that you can't even read their titles. Easily list them and search them. 
@@ -26,10 +34,7 @@ A superuser tool to acomplish your tasks and internet surfing faster. No more sc
 - See number of open tabs across all windows as the badge counter ![badge](screenshots/badge.png)
 - List all open tabs
 - Search through titles and urls of the tabs and quickly switch them by clicking on them.
-- (Optional) Keyboard shortcuts: 
-  - Access [chrome extensions manager](chrome://extensions) and scroll to the end of the page. 
-  - Click on *Keyboard shortcuts* and assign your desired key combination such as **Ctrl+E** to *SuperTabs* extension. 
-  - Next time you are lost in the tabs, just press your shortcut and the search bar in *SuperTabs* will be activated. 
+- Keyboard shortcuts: Press Cmd+E (Win: Ctrl+E) to activate the pop up.
 
 ## Permissions
 - Tabs permission: To access currently open tabs and their url and titles.
@@ -42,7 +47,12 @@ Please report all your valuable feedback, feature requests and bug reports on th
 
 ## Release notes
 
-- 2018.01.13 - v.0.0.1 - Initial release
+- 2018.05.28 - v.1.0.1:
+  - Stable release
+  - Global shortcut to Cmd+E (Win: Ctrl+E)
+  - Add usage tutorial video
+- 2018.04.30 - v1.0.0 - Pop up issue resolved.
+- 2018.01.13 - v.0.0.1 - Initial release.
 
 ## ACKNOWLEDGEMENTS
 
